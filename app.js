@@ -38,11 +38,14 @@ Data are not transferred on each HTTP request
  const ul = document.getElementById('ul');
 
  button.addEventListener('click',()=>{
+     if (!input.value) {
+         return;
+     }
     //  display add item 
     displayItem()
 
     // add item on localStorage 
-    
+    addItemsTodo(input.value)
 
     // clear input value 
     input.value = '';
@@ -58,7 +61,7 @@ const displayItem = ()=>{
                 <i class="fas fa-times"></i>
                 </div> 
     `
-ul.appendChild(div);
+    ul.appendChild(div);
 }
 
 const getAllTodo = () => {
@@ -72,7 +75,13 @@ const getAllTodo = () => {
     return todoObj;
 }
 
-
+const addItemsTodo = item =>{
+    const stodo = getAllTodo();
+    stodo[item] = 1;
+    const itemStringify = JSON.stringify(stodo)
+    localStorage.setItem('todo',itemStringify)
+    console.log(itemStringify);   
+}
 
 
 
