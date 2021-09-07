@@ -40,6 +40,11 @@ Data are not transferred on each HTTP request
  button.addEventListener('click',()=>{
     //  display add item 
     displayItem()
+
+    // add item on localStorage 
+    
+
+    // clear input value 
     input.value = '';
 });
 
@@ -56,7 +61,16 @@ const displayItem = ()=>{
 ul.appendChild(div);
 }
 
-
+const getAllTodo = () => {
+    const todo = localStorage.getItem('todo')
+    let todoObj;
+    if (todo) {
+        todoObj = JSON.parse(todo)
+    }else{
+        todoObj = {}
+    }
+    return todoObj;
+}
 
 
 
