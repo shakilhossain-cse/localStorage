@@ -36,9 +36,16 @@ Data are not transferred on each HTTP request
  const input = document.getElementById('input');
  const button = document.getElementById('button');
  const ul = document.getElementById('ul');
- 
 
  button.addEventListener('click',()=>{
+    //  display add item 
+    displayItem()
+    input.value = '';
+});
+
+
+
+const displayItem = ()=>{
     const div = document.createElement('div');
     div.classList.add('row')
     div.innerHTML= `<p>${input.value}</p>
@@ -46,9 +53,22 @@ Data are not transferred on each HTTP request
                 <i class="fas fa-times"></i>
                 </div> 
     `
-    ul.appendChild(div);
-    input.value = '';
-});
+ul.appendChild(div);
+}
+
+
+
+
+
+
+
+ul.addEventListener('click',(e)=>{
+    if (e.target.className == 'row') {
+        e.target.classList.add('completed')
+        console.log(e.target.classList);
+    }
+})
+
 
 
 
