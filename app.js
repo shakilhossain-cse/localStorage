@@ -33,6 +33,12 @@ Data are not transferred on each HTTP request
  5-10 mb limit (check with the browser) */
 
 
+ const input = document.getElementById('input');
+ const button = document.getElementById('button');
+ const ul = document.getElementById('ul');
+ 
+
+ 
 
 
 
