@@ -38,7 +38,17 @@ Data are not transferred on each HTTP request
  const ul = document.getElementById('ul');
  
 
- 
+ button.addEventListener('click',()=>{
+    const div = document.createElement('div');
+    div.classList.add('row')
+    div.innerHTML= `<p>${input.value}</p>
+                <div class='icon'>
+                <i class="fas fa-times"></i>
+                </div> 
+    `
+    ul.appendChild(div);
+    input.value = '';
+});
 
 
 
