@@ -5,67 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-    <script
-      src="https://kit.fontawesome.com/05a585523c.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .card {
-        background: #ddd;
-        padding: 5rem;
-        width: 50vw;
-        border-radius: 10px;
-      }
-      .input-area {
-        display: flex;
-      }
-      input {
-        width: 80%;
-        height: 2rem;
-        font-size: 20px;
-      }
-      button {
-        width: 20%;
-      }
-      ul {
-        padding: 0;
-      }
-      .row {
-        display: flex;
-        justify-content: space-between;
-        background: white;
-        border-top: 5px solid #ddd;
-        padding: 0 1rem;
-      }
-      ul li {
-        list-style: none;
-      }
-      .icon {
-        width: 10%;
-        background: #e1e1ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 150%;
-        color: red;
-        cursor: pointer;
-      }
-      button{
-          background: wheat;
-          font-size: large;
-      }
-      .completed{
-          background: rgb(141, 141, 141);
-      }
-    </style>
+
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1     >Todo Task</h1>
@@ -77,6 +18,11 @@
       <ul id="ul"></ul>
       <button id='clear'>Clear All Todos</button>
     </div>
+
+    <script
+    src="https://kit.fontawesome.com/05a585523c.js"
+    crossorigin="anonymous"
+  ></script>
     <script src="app.js"></script>
   </body>
 </html>
